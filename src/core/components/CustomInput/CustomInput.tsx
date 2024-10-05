@@ -5,17 +5,27 @@ interface CustomInputProps {
     type: string;
     placeholder: string;
     required?: boolean;
+    icon?: string;  // Optional icon prop for dynamic image
 }
 
-const CustomInput: React.FC<CustomInputProps> = ({ id, type, placeholder, required }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ id, type, placeholder, required, icon }) => {
     return (
-        <input
-            id={id}
-            type={type}
-            placeholder={placeholder}
-            required={required}
-            className="border-b-2 border-app-light-gray bg-transparent focus:border-none focus:outline-none py-2 w-full border-t-0 border-l-0 border-r-0 mb-8 placeholder-inter" // Set other borders to none
-        />
+        <div className="relative w-full mb-8">
+            <input
+                id={id}
+                type={type}
+                placeholder={placeholder}
+                required={required}
+                className={`border-b-2 border-app-light-gray bg-transparent focus:border-none focus:outline-none py-2 w-full border-t-0 border-l-0 border-r-0 placeholder-inter ${icon ? 'pr-10' : ''}`} // Add padding if icon exists
+            />
+            {icon && (
+                <img
+                    src={icon}
+                    alt={`${id}-icon`}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 cursor-pointer"
+                />
+            )}
+        </div>
     );
 };
 

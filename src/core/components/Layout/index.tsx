@@ -1,4 +1,6 @@
 import { FC, Fragment, ReactNode } from 'react';
+import Header from './Header/Header';
+import Footer from './Footer';
 
 type LayoutProps = {
   children: ReactNode;
@@ -7,7 +9,11 @@ type LayoutProps = {
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <Fragment>
-      {children}
+      <Header />
+      <main className='2xl:container mx-auto'>
+        {children}
+      </main>
+      <Footer />
     </Fragment>
   )
 }

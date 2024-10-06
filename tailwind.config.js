@@ -15,7 +15,18 @@ module.exports = {
         'app-black': '#141718',
         'app-gray': '#6C7275',
         'app-light-gray': '#E8ECEF',
-        'app-green': '#38CB89'
+        'app-slate-gray': '#343839',
+        'app-green': '#38CB89',
+        'app-blue': '#377DFF',
+        primary: {
+          DEFAULT: '#F3F5F7',
+        }
+      },
+      screens: {
+        '2xl': '1440px',
+      },
+      boxShadow: {
+        'wishlist-icon': '0px 8px 16px -8px rgba(15, 15, 15, 0.12)',
       }
     },
   },

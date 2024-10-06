@@ -1,10 +1,14 @@
 import { FC, useState } from 'react';
 import MobileMenu from './MobileMenu';
+import { Flayout } from '../../Cart/Flayout';
 
 
 
 const Header: FC = () => {
     const [open, setOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(false);
+    console.log(cartOpen);
+    
     return (
         <header className='relative'>
             <div className='bg-primary py-2 relative flex justify-center items-center gap-[22px]'>
@@ -45,14 +49,14 @@ const Header: FC = () => {
                 <div className='flex items-center gap-4'>
                     <img src="/images/search.svg" alt="Search Icon" className='h-6 w-6' />
                     <img src="/images/user-circle.svg" alt="Search Icon" className='h-6 w-6' />
-                    <div className='flex items-center gap-1.5'>
+                    <button onClick={() => setCartOpen(!cartOpen)} className='flex items-center gap-1.5'>
                         <img src="/images/shopping bag.svg" alt="Search Icon" className='h-6 w-6' />
                         <div className='bg-app-black h-5 w-5 rounded-full flex justify-center items-center'>
                             <p className='text-white text-center font-inter text-xs font-bold leading-[10px]'>
                                 2
                             </p>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div className='flex justify-between items-center md:hidden py-4 px-8'>
@@ -63,19 +67,23 @@ const Header: FC = () => {
                     <img src="/images/logo.svg" alt="Logo" className='h-6 w-auto' />
                 </div>
                 <div className='px-[1px] py-0.5'>
-                    <div className='flex items-center gap-1.5'>
+                    <button onClick={()=> setCartOpen(true)} className='flex items-center gap-1.5'>
                         <img src="/images/shopping bag.svg" alt="Search Icon" className='h-6 w-6' />
                         <div className='bg-app-black h-5 w-5 rounded-full flex justify-center items-center'>
                             <p className='text-white text-center font-inter text-xs font-bold leading-[10px]'>
-                                2
+                                2 
                             </p>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             {
                 open && 
                 <MobileMenu setOpen={setOpen} />
+            }
+            {
+                cartOpen &&
+                <Flayout setOpen={setCartOpen} />
             }
      </header>
     )

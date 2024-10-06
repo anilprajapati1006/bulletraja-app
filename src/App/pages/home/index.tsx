@@ -109,8 +109,8 @@ const Home: FC = () => {
             </a>
           </div>
         </div>
-        <div className='grid md:grid-rows-2'>
-          <div className='md:max-h-[319px] h-[319px] w-full bg-primary grid grid-cols-2'>
+        <div className='grid md:grid-rows-2 gap-4'>
+          <div className='w-full bg-primary grid grid-cols-2'>
             <div className='py-[42px] pl-8 flex flex-col justify-end'>
               <h2 className='text-app-black font-poppins text-[28px]/[34px] md:text-[34px]/[28px] font-medium tracking-[-0.6px] md:tracking-[-0.6px]'>
                 Living Room
@@ -124,7 +124,7 @@ const Home: FC = () => {
             <img src="/images/category-one.png" alt="" className='object-cover w-full h-full md:max-h-[319px]' />
           </div>
 
-          <div className='md:max-h-[319px] h-[319px] w-full bg-primary grid grid-cols-2'>
+          <div className='w-full bg-primary grid grid-cols-2'>
             <div className='py-[42px] pl-8 flex flex-col justify-end'>
               <h2 className='text-app-black font-poppins text-[34px]/[28px] font-medium tracking-[-0.6px]'>
                 Living Room

@@ -18,6 +18,8 @@ module.exports = {
         'app-slate-gray': '#343839',
         'app-green': '#38CB89',
         'app-blue': '#377DFF',
+        'grayish-brown': '#605F5F',
+        'taup-gray': '#807E7E',
         primary: {
           DEFAULT: '#F3F5F7',
         }

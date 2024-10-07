@@ -103,3 +103,27 @@
   border-radius: 10px;
   background: #141718;
 }
+
+.shop-page-banner-bg {
+  background:
+    linear-gradient(180deg, rgba(243, 245, 247, 0.00) 27.68%, rgba(243, 245, 247, 0.60) 66.63%, rgba(243, 245, 247, 0.20) 100%),
+    url('/images/shop-bg.png') lightgray 50% / cover no-repeat;
+  background-color: #F3F5F7;
+  background-blend-mode: normal, multiply;
+}
+
+.custom-categroy-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-categroy-scrollbar::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.custom-categroy-scrollbar::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #141718;
+}

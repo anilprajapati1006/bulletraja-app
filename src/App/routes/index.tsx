@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { IRoute } from '@/core/interface/common';
 import { ROUTES } from '@/core/enum/common';
 
-import { HomePage, LoginPage, RegisterPage } from '@/app/pages';
+import { HomePage, LoginPage, RegisterPage, ShopPage } from '@/app/pages';
 
 const AppRoutes: FC = () => {
   const routes: IRoute[] = [
@@ -18,6 +18,11 @@ const AppRoutes: FC = () => {
       path: ROUTES.REGISTER,
       component: RegisterPage,
     },
+    {
+      name: 'Shop',
+      path: ROUTES.SHOP,
+      component: ShopPage
+    }
   ];
 
   return (

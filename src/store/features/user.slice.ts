@@ -19,6 +19,9 @@ const UserSlice = createSlice({
     saveToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
     },
+    saveUser: (state, action: PayloadAction<string>) => {
+      state.user = action.payload;
+    },
   },
 });
 

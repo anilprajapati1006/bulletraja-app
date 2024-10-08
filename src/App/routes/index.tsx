@@ -5,6 +5,7 @@ import { IRoute } from '@/core/interface/common';
 import { ROUTES } from '@/core/enum/common';
 
 import { HomePage, LoginPage, RegisterPage, ShopPage } from '@/app/pages';
+import ProductPage from '../pages/product';
 
 const AppRoutes: FC = () => {
   const routes: IRoute[] = [
@@ -22,6 +23,11 @@ const AppRoutes: FC = () => {
       name: 'Shop',
       path: ROUTES.SHOP,
       component: ShopPage
+    },
+    {
+      name: 'Product',
+      path: ROUTES.PRODUCT,
+      component: ProductPage,
     }
   ];
 

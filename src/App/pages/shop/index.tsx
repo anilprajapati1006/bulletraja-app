@@ -2,8 +2,8 @@
 export default function ShopPage() {
   return (
     <section className="px-8 lg:px-14">
-      <div className="shop-page-banner-bg h-[392px] max-h-[392px] flex justify-center items-center">
-        <div className="max-w-fit flex flex-col items-center gap-6">
+      <div className="shop-page-banner-bg min-h-[308px] md:h-[392px] max-h-[392px] flex justify-center items-center">
+        <div className="max-w-fit flex flex-col items-center gap-4 md:gap-6">
           <div className="w-fit flex gap-4">
             <div className="flex items-center gap-1">
               <p className="text-grayish-brown font-inter text-sm/6 font-medium">Home</p>
@@ -13,15 +13,53 @@ export default function ShopPage() {
               Shop
             </p>
           </div>
-          <h1 className="text-app-black font-poppins text-[54px]/[58px] tracking-[-1px] font-medium">
+          <h1 className="text-app-black font-poppins text-[40px]/[44px] md:text-[54px]/[58px] tracking-[-0.4px] md:tracking-[-1px] font-medium">
           Shop Page
           </h1>
-          <p className="text-app-black font-inter text-xl/[32px] font-normal">
+          <p className="text-app-black font-inter text-center text-base/[26px] md:text-xl/[32px] font-normal">
             Let’s design the place you always imagined.
           </p>
         </div>
       </div>
-      <div className="pt-[60px] pb-[100px] grid md:grid-cols-4 gap-6">
+      <div className="pt-8 md:pt-[60px] pb-[100px] grid md:grid-cols-4 gap-6">
+        <div className="flex md:hidden border-y border-app-light-gray col-span-3 justify-between items-center py-2">
+          <div className="flex items-center gap-2">
+            <img src="/images/filter.svg" alt="filter icon" className="h-6 w-6" />
+            <p className="text-app-black font-inter text-base/[28px] md:text-xl/8 font-semibold">
+              Filter
+            </p>
+          </div>
+          <div className="flex">
+            <button className="py-2 px-3 bg-primary flex justify-center items-center border-r border-app-light-gray">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M8.75 13C9.34674 13 9.91903 13.2371 10.341 13.659C10.7629 14.081 11 14.6533 11 15.25V18.75C11 19.3467 10.7629 19.919 10.341 20.341C9.91903 20.7629 9.34674 21 8.75 21H5.25C4.65326 21 4.08097 20.7629 3.65901 20.341C3.23705 19.919 3 19.3467 3 18.75V15.25C3 14.6533 3.23705 14.081 3.65901 13.659C4.08097 13.2371 4.65326 13 5.25 13H8.75ZM18.75 13C19.3467 13 19.919 13.2371 20.341 13.659C20.7629 14.081 21 14.6533 21 15.25V18.75C21 19.3467 20.7629 19.919 20.341 20.341C19.919 20.7629 19.3467 21 18.75 21H15.25C14.6533 21 14.081 20.7629 13.659 20.341C13.2371 19.919 13 19.3467 13 18.75V15.25C13 14.6533 13.2371 14.081 13.659 13.659C14.081 13.2371 14.6533 13 15.25 13H18.75ZM8.75 3C9.34674 3 9.91903 3.23705 10.341 3.65901C10.7629 4.08097 11 4.65326 11 5.25V8.75C11 9.34674 10.7629 9.91903 10.341 10.341C9.91903 10.7629 9.34674 11 8.75 11H5.25C4.65326 11 4.08097 10.7629 3.65901 10.341C3.23705 9.91903 3 9.34674 3 8.75V5.25C3 4.65326 3.23705 4.08097 3.65901 3.65901C4.08097 3.23705 4.65326 3 5.25 3H8.75ZM18.75 3C19.3467 3 19.919 3.23705 20.341 3.65901C20.7629 4.08097 21 4.65326 21 5.25V8.75C21 9.34674 20.7629 9.91903 20.341 10.341C19.919 10.7629 19.3467 11 18.75 11H15.25C14.6533 11 14.081 10.7629 13.659 10.341C13.2371 9.91903 13 9.34674 13 8.75V5.25C13 4.65326 13.2371 4.08097 13.659 3.65901C14.081 3.23705 14.6533 3 15.25 3H18.75Z" fill="#141718" />
+                <path d="M3 6H10.998V18H3V6Z" fill="#141718" />
+                <path d="M13.002 6H21V18H13.002V6Z" fill="#141718" />
+              </svg>
+            </button>
+            <button className="py-3 px-3 bg-primary flex justify-center items-center border-t border-app-light-gray rotate-90">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M8.75 13C9.34674 13 9.91903 13.2371 10.341 13.659C10.7629 14.081 11 14.6533 11 15.25V18.75C11 19.3467 10.7629 19.919 10.341 20.341C9.91903 20.7629 9.34674 21 8.75 21H5.25C4.65326 21 4.08097 20.7629 3.65901 20.341C3.23705 19.919 3 19.3467 3 18.75V15.25C3 14.6533 3.23705 14.081 3.65901 13.659C4.08097 13.2371 4.65326 13 5.25 13H8.75ZM18.75 13C19.3467 13 19.919 13.2371 20.341 13.659C20.7629 14.081 21 14.6533 21 15.25V18.75C21 19.3467 20.7629 19.919 20.341 20.341C19.919 20.7629 19.3467 21 18.75 21H15.25C14.6533 21 14.081 20.7629 13.659 20.341C13.2371 19.919 13 19.3467 13 18.75V15.25C13 14.6533 13.2371 14.081 13.659 13.659C14.081 13.2371 14.6533 13 15.25 13H18.75ZM8.75 3C9.34674 3 9.91903 3.23705 10.341 3.65901C10.7629 4.08097 11 4.65326 11 5.25V8.75C11 9.34674 10.7629 9.91903 10.341 10.341C9.91903 10.7629 9.34674 11 8.75 11H5.25C4.65326 11 4.08097 10.7629 3.65901 10.341C3.23705 9.91903 3 9.34674 3 8.75V5.25C3 4.65326 3.23705 4.08097 3.65901 3.65901C4.08097 3.23705 4.65326 3 5.25 3H8.75ZM18.75 3C19.3467 3 19.919 3.23705 20.341 3.65901C20.7629 4.08097 21 4.65326 21 5.25V8.75C21 9.34674 20.7629 9.91903 20.341 10.341C19.919 10.7629 19.3467 11 18.75 11H15.25C14.6533 11 14.081 10.7629 13.659 10.341C13.2371 9.91903 13 9.34674 13 8.75V5.25C13 4.65326 13.2371 4.08097 13.659 3.65901C14.081 3.23705 14.6533 3 15.25 3H18.75Z" fill="#6C7275" />
+                <path d="M3 6H10.998V18H3V6Z" fill="#6C7275" />
+                <path d="M13.002 6H21V18H13.002V6Z" fill="#6C7275" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div className="flex md:hidden col-span-3 justify-between items-center py-2">
+          <p className="text-app-black font-inter text-base/[26px] md:text-xl/8 font-semibold">
+            Filter
+          </p>
+          <div className="relative inline-block w-fit">
+            <select
+              className="w-full appearance-none rounded-md border-none outline-none bg-white px-4 py-2 pr-10 text-gray-900 focus:border-none focus:outline-none focus:ring-0"
+            >
+              <option className="text-app-black font-inter text-base/[26px] font-semibold w-full">
+                Sort by
+              </option>
+            </select>
+          </div>
+        </div>
         <div className="col-span-1 hidden md:flex flex-col gap-6">
           <div className="flex items-center gap-2">
             <img src="/images/filter.svg" alt="filter icon" className="h-6 w-6" />
@@ -117,7 +155,7 @@ export default function ShopPage() {
               </div>
             </div>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-20">
             {
               Array.from({ length: 9 }, (_, idx) =>
                 <div key={idx}>
@@ -125,10 +163,10 @@ export default function ShopPage() {
                     style={{
                       background: 'url(/images/product-one.png)',
                       backgroundPosition: 'center',
-                      backgroundSize: 'cover',
+                      backgroundSize: 'contain',
                       backgroundRepeat: 'no-repeat',
                     }}
-                    className='bg-primary h-[308px] md:h-[349px] p-4 flex flex-col justify-between'
+                    className='bg-primary h-[308px] md:h-[349px] py-4 px-3 md:p-4 flex flex-col justify-between'
                   >
                     <div className='flex justify-between items-center '>
                       <div>
@@ -143,7 +181,7 @@ export default function ShopPage() {
                         <img src="/images/wishlist.svg" alt="whishlist" className='h-5 w-5' />
                       </div>
                     </div>
-                    <button className='text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-black rounded-lg w-full px-10 py-[10px]'>
+                    <button className='text-white text-center font-inter text-base/6 md:text-base/7 font-medium tracking-[-0.4px] bg-app-black rounded-lg w-full px-4 md:px-10 py-2 md:py-[10px]'>
                       Add to cart
                     </button>
                   </div>

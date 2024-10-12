@@ -3,5 +3,9 @@ export enum ROUTES {
   LOGIN = '/login',
   REGISTER = '/register',
   SHOP = '/shop',
-  PRODUCT = '/product/:id'
+  PRODUCT = '/product/:id',
+  CART = '/cart',
+  CHECKOUT = '/checkout',
+  ORDER = '/order',
+  PROFILE = '/profile',
 }

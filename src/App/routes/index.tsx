@@ -4,7 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import { IRoute } from '@/core/interface/common';
 import { ROUTES } from '@/core/enum/common';
 
-import { HomePage, LoginPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
+import { CartPage, CheckOutPage, HomePage, LoginPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
+import OrderComplete from '../pages/order';
+import ProfilePage from '../pages/profile';
 
 const AppRoutes: FC = () => {
   const routes: IRoute[] = [
@@ -27,6 +29,26 @@ const AppRoutes: FC = () => {
       name: 'Product',
       path: ROUTES.PRODUCT,
       component: ProductPage,
+    },
+    {
+      name: 'Cart',
+      path: ROUTES.CART,
+      component: CartPage,
+    },
+    {
+      name: 'Checkout',
+      path: ROUTES.CHECKOUT,
+      component: CheckOutPage,
+    },
+    {
+      name: 'Order',
+      path: ROUTES.ORDER,
+      component: OrderComplete,
+    },
+    {
+      name: 'Profile',
+      path: ROUTES.PROFILE,
+      component: ProfilePage
     }
   ];
 

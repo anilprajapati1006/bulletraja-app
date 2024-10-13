@@ -7,7 +7,14 @@ import { Flayout } from '../../Cart/Flayout';
 const Header: FC = () => {
     const [open, setOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
-    console.log(cartOpen);
+    
+    const navLinks = [
+        { name: 'Home', url: '/' },
+        { name: 'Shop', url: '/shop' },
+        { name: 'Product', url: '/product/1' },
+        { name: 'Contact', url: '/contact' }
+    ];
+
     
     return (
         <header className='relative'>
@@ -32,19 +39,15 @@ const Header: FC = () => {
                 </div>
                 <nav className='flex-grow text-center'>
                     <ul className='flex justify-center items-center space-x-10'>
-                        <li>
-                            <a href="#" className='text-app-black font-inter text-sm font-semibold'>Home</a>
-                        </li>
-                        <li>
-                            <a href="#" className='text-app-black font-inter text-sm font-semibold'>Shop</a>
-                        </li>
-                        <li>
-                            <a href="#" className='text-app-black font-inter text-sm font-semibold'>Product</a>
-                        </li>
-                        <li>
-                            <a href="#" className='text-app-black font-inter text-sm font-semibold'>Contact</a>
-                        </li>
+                        {navLinks.map((link, index) => (
+                            <li key={index}>
+                                <a href={link.url} className='text-app-black font-inter text-sm font-semibold'>
+                                    {link.name}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
+
                 </nav>
                 <div className='flex items-center gap-4'>
                     <img src="/images/search.svg" alt="Search Icon" className='h-6 w-6' />
@@ -81,10 +84,9 @@ const Header: FC = () => {
                 open && 
                 <MobileMenu setOpen={setOpen} />
             }
-            {
-                cartOpen &&
-                <Flayout setOpen={setCartOpen} />
-            }
+            <div className={`cart-transition ${cartOpen ? 'cart-open' : ''}`}>
+                {cartOpen && <Flayout setOpen={setCartOpen} />}
+            </div>
      </header>
     )
 }

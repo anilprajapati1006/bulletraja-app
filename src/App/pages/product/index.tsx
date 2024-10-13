@@ -1,4 +1,5 @@
 import CustomAccordion from "@/core/components/Accordian";
+import ProductSlider from "@/core/components/ProductSlider/indext";
 
 
 export default function ProductPage() {
@@ -14,52 +15,9 @@ export default function ProductPage() {
                   Shop
               </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-16">
-              <div className='space-y-5'>
-                  <div className='relative h-[414px] md:h-[729px] w-full bg-primary'>
-                      <div className="absolute top-6 md:top-8 left-6 md:left-8">
-                          <div className='px-4 py-2 bg-white rounded'>
-                              <p className='text-app-black font-inter text-base font-bold uppercase'>New</p>
-                          </div>
-                          <div className='px-4 py-2 bg-app-green rounded mt-2'>
-                              <p className='text-white font-inter text-base font-bold uppercase'>-50%</p>
-                          </div>
-                      </div>
-                      <img
-                          src={'/images/product-one.png'}
-                          alt={'Product Img'}
-                          className='object-contain object-center h-auto max-h-full w-full'
-                      />
-                      <button
-                          className='absolute left-6 md:left-8 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full'
-                      >
-                          <img style={{
-                              height: '32px',
-                              width: '32px'
-                          }} src={'/images/arrow-left-carousel.svg'} alt="arrow right" className="h-6 w-6 object-contain" />
-                      </button>
-                      <button
-                          className='absolute right-6 md:right-8 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full'
-                      >
-                          <img style={{
-                              height: '32px',
-                              width: '32px'
-                          }} src={'/images/arrow-right-carousel.svg'} alt="arrow right" className="h-6 w-6 object-contain" />
-                      </button>
-                  </div>
-                  <div className='hidden md:grid grid-cols-3 gap-6'>
-                      {
-                          Array.from({ length: 3 }, (_, idx) => (
-                              <div key={idx} className={`h-[167px] w-full max-w-full`}>
-                                  <img
-                                      src={'/images/product-one.png'}
-                                      alt={'Product Img'}
-                                      className='object-cover object-center h-full w-full'
-                                  />
-                              </div>
-                          ))
-                      }
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div className=''>
+                  <ProductSlider />
               </div>
               <div>
                   <div className="space-y-4 pb-6 border-b border-app-light-gray">
@@ -121,7 +79,7 @@ export default function ProductPage() {
                           <p className="text-app-black font-inter text-xl/8 font-normal mb-4">
                               Black
                           </p>
-                          <div className="flex gap-4 items-center overflow-x-scroll">
+                          <div className="flex gap-4 items-center overflow-x-scroll hide-scrollbar">
                               {
                                   Array.from({ length: 4 }, (_, idx) => (
                                       <img key={idx} src="/images/product-color.png" alt="product" className="w-[72px] h-[72px] object-contain" />
@@ -172,8 +130,8 @@ export default function ProductPage() {
                   </div>
               </div>
           </div>
-          <div className="py-10 hidden md:flex">
-              <div className=" gap-20 border-b border-app-light-gray mb-12">
+          <div className="py-10 hidden md:block">
+              <div className="flex gap-20 border-b border-app-light-gray mb-12">
                   <button className="text-app-gray font-inter text-lg/8 font-medium tracking-[-0.4px]">
                       Additional Info
                   </button>

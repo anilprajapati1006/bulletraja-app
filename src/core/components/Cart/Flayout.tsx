@@ -68,7 +68,7 @@ export const Flayout = ({ setOpen }: FlayoutMenuProps) => {
                     <Button text="Check Out" onClick={() => console.log('hello')} />
                 </div>
                 <a
-                    href=""
+                    href="/cart"
                     className="inline-flex justify-center text-center w-full py-2"
                 >
                     <p className="border-b border-app-black font-inter text-sm/[22px] font-semibold text-app-black">

@@ -14,11 +14,6 @@ const Home: FC = () => {
       paragraph: 'Order above $200'
     },
     {
-      image: '/images/shipping.svg',
-      title: 'Money-back',
-      paragraph: 'Order above $200'
-    },
-    {
       image: '/images/finance.svg',
       title: 'Money-back',
       paragraph: '30 days guarantee'
@@ -208,7 +203,7 @@ const Home: FC = () => {
             <img src="/images/arrow-right-carousel.svg" alt="arrow right" className='h-[20px] w-[20px]' />
           </a>
       </div>
-      <div className='py-12 grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6'>
+      <div className='py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-6'>
         {
           services.map((item, idx) =>
             <div key={idx} className='py-12 px-8 bg-primary'>

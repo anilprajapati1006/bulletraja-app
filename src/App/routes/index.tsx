@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { IRoute } from '@/core/interface/common';
 import { ROUTES } from '@/core/enum/common';
 
-import { CartPage, CheckOutPage, HomePage, LoginPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
+import { CartPage, CheckOutPage, ContactPage, HomePage, LoginPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
 import OrderComplete from '../pages/order';
 import ProfilePage from '../pages/profile';
 
@@ -49,6 +49,11 @@ const AppRoutes: FC = () => {
       name: 'Profile',
       path: ROUTES.PROFILE,
       component: ProfilePage
+    },
+    {
+      name: 'Contact',
+      path: ROUTES.CONTACT,
+      component: ContactPage,
     }
   ];
 

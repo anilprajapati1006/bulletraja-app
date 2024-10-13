@@ -7,3 +7,4 @@ export { default as CartPage } from './cart';
 export { default as CheckOutPage } from './checkout';
 export { default as OrderCompletePage } from './order';
 export { default as ProfilePage } from './product';
+export { default as ContactPage } from './contact';

@@ -1,5 +1,13 @@
+import { useState } from "react";
+import AddressForm from "../AddressForm";
 
 export default function Address() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="w-full py-10 md:py-0 md:px-[72px]">
             <div className="space-y-5">
@@ -15,7 +23,7 @@ export default function Address() {
                                 <p className="text-app-black font-inter text-base/[26px] font-semibold">
                                     Billing Address
                                 </p>
-                                <button className="flex gap-1 items-center">
+                                <button onClick={openModal} className="flex gap-1 items-center">
                                     <img src="/images/edit.svg" alt="Edit" className="w-4 h-4 object-contain object-center" />
                                     <p className="text-app-gray font-inter text-base/[26px] font-semibold">
                                         Edit
@@ -37,6 +45,7 @@ export default function Address() {
                     ))
                 }
             </div>
+            <AddressForm isOpen={isModalOpen} onClose={closeModal} />
         </div>
     )
 }

@@ -51,7 +51,9 @@ const Header: FC = () => {
                 </nav>
                 <div className='flex items-center gap-4'>
                     <img src="/images/search.svg" alt="Search Icon" className='h-6 w-6' />
-                    <img src="/images/user-circle.svg" alt="Search Icon" className='h-6 w-6' />
+                    <a href='/profile'>
+                        <img src="/images/user-circle.svg" alt="Search Icon" className='h-6 w-6' />
+                    </a>
                     <button onClick={() => setCartOpen(!cartOpen)} className='flex items-center gap-1.5'>
                         <img src="/images/shopping bag.svg" alt="Search Icon" className='h-6 w-6' />
                         <div className='bg-app-black h-5 w-5 rounded-full flex justify-center items-center'>

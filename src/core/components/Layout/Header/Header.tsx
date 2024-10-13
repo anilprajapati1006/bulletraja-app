@@ -84,7 +84,7 @@ const Header: FC = () => {
                 open && 
                 <MobileMenu setOpen={setOpen} />
             }
-            <div className={`cart-transition ${cartOpen ? 'cart-open' : ''}`}>
+            <div className={`cart-transition ${cartOpen ? 'cart-open absolute top-0 right-0 z-50' : ''}`}>
                 {cartOpen && <Flayout setOpen={setCartOpen} />}
             </div>
      </header>

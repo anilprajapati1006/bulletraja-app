@@ -16,7 +16,7 @@ const CustomInput: React.FC<CustomInputProps> = ({ id, type, placeholder, requir
                 type={type}
                 placeholder={placeholder}
                 required={required}
-                className={`border-b-2 border-app-light-gray bg-transparent focus:border-none focus:outline-none py-2 w-full border-t-0 border-l-0 border-r-0 placeholder-inter ${icon ? 'pr-10' : ''}`} // Add padding if icon exists
+                className={`border-b-2 border-app-light-gray bg-transparent focus:outline-none focus:ring-0 py-2 w-full border-t-0 border-l-0 border-r-0 placeholder-inter ${icon ? 'pr-10' : ''}`} // Add padding if icon exists
             />
             {icon && (
                 <img

@@ -8,5 +8,7 @@ export enum ROUTES {
   CHECKOUT = '/checkout',
   ORDER = '/order',
   PROFILE = '/profile',
-  CONTACT = '/contact'
+  CONTACT = '/contact',
+  FORGOT_PASSWORD = '/forgot-password',
+  OTP_PAGE = '/otp',
 }

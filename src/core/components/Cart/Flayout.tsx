@@ -6,7 +6,7 @@ interface FlayoutMenuProps {
 
 export const Flayout = ({ setOpen }: FlayoutMenuProps) => {
     return (
-        <div className="h-screen bg-white py-10 px-6 absolute top-0 right-0 z-50 flex flex-col justify-between w-full md:w-[413px] max-w-[413px]">
+        <div className="h-screen bg-white py-10 px-6 flex flex-col justify-between w-full md:w-[413px] max-w-[413px]">
             <div className="relative">
                 <button onClick={() => setOpen(false)} className="absolute right-0 top-0.5">
                     <img src="/images/close.svg" alt="" />

@@ -1,5 +1,82 @@
+import ProductCard from "@/core/components/ProductCard";
 
 export default function ShopPage() {
+
+  const products = [
+    {
+      name: 'Loveseat Sofa',
+      price: '$199.00',
+      oldPrice: '$400.00',
+      image: '/pro-1.png',
+      isNew: true,
+      discount: '-50%',
+      rating: 5,
+    },
+    {
+      name: 'Armchair',
+      price: '$150.00',
+      oldPrice: '$300.00',
+      image: '/pro-2.png',
+      isNew: true,
+      discount: '-50%',
+      rating: 4,
+    },
+    {
+      name: 'Coffee Table',
+      price: '$99.00',
+      oldPrice: '$200.00',
+      image: '/pro-3.png',
+      isNew: true,
+      discount: '-30%',
+      rating: 3,
+    },
+    {
+      name: 'Dining Table',
+      price: '$499.00',
+      oldPrice: '$700.00',
+      image: '/pro-4.png',
+      isNew: false,
+      discount: '-20%',
+      rating: 4,
+    },
+    {
+      name: 'Loveseat Sofa',
+      price: '$199.00',
+      oldPrice: '$400.00',
+      image: '/pro-1.png',
+      isNew: true,
+      discount: '-50%',
+      rating: 5,
+    },
+    {
+      name: 'Armchair',
+      price: '$150.00',
+      oldPrice: '$300.00',
+      image: '/pro-2.png',
+      isNew: true,
+      discount: '-50%',
+      rating: 4,
+    },
+    {
+      name: 'Coffee Table',
+      price: '$99.00',
+      oldPrice: '$200.00',
+      image: '/pro-3.png',
+      isNew: true,
+      discount: '-30%',
+      rating: 3,
+    },
+    {
+      name: 'Dining Table',
+      price: '$499.00',
+      oldPrice: '$700.00',
+      image: '/pro-4.png',
+      isNew: false,
+      discount: '-20%',
+      rating: 4,
+    }
+  ];
+
   return (
     <section className="px-8 lg:px-14">
       <div className="shop-page-banner-bg min-h-[308px] md:h-[392px] max-h-[392px] flex justify-center items-center">
@@ -156,58 +233,9 @@ export default function ShopPage() {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-20">
-            {
-              Array.from({ length: 9 }, (_, idx) =>
-                <div key={idx}>
-                  <div
-                    style={{
-                      background: 'url(/images/product-one.png)',
-                      backgroundPosition: 'center',
-                      backgroundSize: 'contain',
-                      backgroundRepeat: 'no-repeat',
-                    }}
-                    className='bg-primary h-[308px] md:h-[349px] py-4 px-3 md:p-4 flex flex-col justify-between'
-                  >
-                    <div className='flex justify-between items-center '>
-                      <div>
-                        <div className='px-3 py-1 bg-white rounded'>
-                          <p className='text-app-black font-inter text-base font-bold uppercase'>New</p>
-                        </div>
-                        <div className='px-3 py-1 bg-app-green rounded mt-2'>
-                          <p className='text-white font-inter text-base font-bold uppercase'>-50%</p>
-                        </div>
-                      </div>
-                      <div className='bg-white p-1.5 rounded-3xl h-8 w-8 shadow-wishlist-icon'>
-                        <img src="/images/wishlist.svg" alt="whishlist" className='h-5 w-5' />
-                      </div>
-                    </div>
-                    <button className='text-white text-center font-inter text-base/6 md:text-base/7 font-medium tracking-[-0.4px] bg-app-black rounded-lg w-full px-4 md:px-10 py-2 md:py-[10px]'>
-                      Add to cart
-                    </button>
-                  </div>
-                  <div className='mt-3'>
-                    <div className='flex gap-0.5 mb-2'>
-                      {
-                        Array.from({ length: 5 }, (_, idx) => (
-                          <img key={idx} src="/images/star-icon.svg" alt="star icon" />
-                        ))
-                      }
-                    </div>
-                    <h3 className='mb-2 text-app-black font-inter text-base/[26px] font-medium'>
-                      Loveseat Sofa
-                    </h3>
-                    <div className='flex gap-3.5 items-center'>
-                      <p className='text-app-black font-inter text-sm/[22px] font-semibold'>
-                        $199.00
-                      </p>
-                      <p className='text-app-gray font-inter text-sm/[22px] font-semibold'>
-                        $400.00
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
+            {products.map((product, idx) => (
+              <ProductCard product={product} key={idx} />
+            ))}
           </div>
           <div className="flex justify-center">
             <button className="py-1.5 px-10 rounded-[80px] border border-app-black text-center font-inter text-base/7 font-semibold tracking-[-0.4px]">

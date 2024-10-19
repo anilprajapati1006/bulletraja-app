@@ -11,7 +11,7 @@ const Header: FC = () => {
     const navLinks = [
         { name: 'Home', url: '/' },
         { name: 'Shop', url: '/shop' },
-        { name: 'Product', url: '/product/1' },
+        { name: 'Our Story', url: '/about' },
         { name: 'Contact', url: '/contact' }
     ];
 
@@ -35,7 +35,7 @@ const Header: FC = () => {
             </div>
             <div className='hidden md:flex justify-between items-center mx-auto px-4 md:px-7 lg:px-14 py-4'>
                 <div className='flex items-center'>
-                    <img src="/images/logo.svg" alt="Logo" className='h-6 w-auto' />
+                    <img src="/logo.jpg" alt="Logo" className='h-24 w-auto' />
                 </div>
                 <nav className='flex-grow text-center'>
                     <ul className='flex justify-center items-center space-x-10'>

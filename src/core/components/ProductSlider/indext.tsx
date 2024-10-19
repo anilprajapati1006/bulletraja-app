@@ -6,9 +6,9 @@ import { useState } from "react";
 import { Swiper as SwiperType } from 'swiper';
 
 const productImages = [
-    '/images/product-one.png',
-    '/images/product-two.png',
-    '/images/product-three.png',
+    '/pro-3.png',
+    '/pro-4.png',
+    '/pro-5.png',
 ];
 
 export default function ProductSlider() {

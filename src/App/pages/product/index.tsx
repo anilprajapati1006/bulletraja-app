@@ -4,6 +4,8 @@ import ProductSlider from "@/core/components/ProductSlider/indext";
 
 export default function ProductPage() {
 
+    
+
   return (
       <section className="px-8 lg:px-14 border-t border-app-light-gray">
           <div className="w-fit flex gap-3 md:gap-4 py-4">

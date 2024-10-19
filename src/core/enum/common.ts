@@ -9,6 +9,8 @@ export enum ROUTES {
   ORDER = '/order',
   PROFILE = '/profile',
   CONTACT = '/contact',
+  ABOUT = '/about',
   FORGOT_PASSWORD = '/forgot-password',
   OTP_PAGE = '/otp',
+  EORR_PAGE = '/error'
 }

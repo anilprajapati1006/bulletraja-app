@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { IRoute } from '@/core/interface/common';
 import { ROUTES } from '@/core/enum/common';
 
-import { CartPage, CheckOutPage, ContactPage, ForgotPassword, HomePage, LoginPage, OtpPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
+import { AboutPage, CartPage, CheckOutPage, ContactPage, ErrorPage, ForgotPassword, HomePage, LoginPage, OtpPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
 import OrderComplete from '../pages/order';
 import ProfilePage from '../pages/profile';
 
@@ -64,6 +64,16 @@ const AppRoutes: FC = () => {
       name: 'Otp',
       path: ROUTES.OTP_PAGE,
       component: OtpPage,
+    },
+    {
+      name: 'About',
+      path: ROUTES.ABOUT,
+      component: AboutPage
+    },
+    {
+      name: 'Error',
+      path: ROUTES.EORR_PAGE,
+      component: ErrorPage,
     }
   ];
 

@@ -1,8 +1,11 @@
+import Button from "@/core/components/Button/Button";
 import Process from "@/core/components/Process";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CartPage() {
     const [selectedOption, setSelectedOption] = useState('');
+    const navigate = useNavigate();
     return (
         <section className="px-8 lg:px-14 py-20">
             <div className="">
@@ -221,6 +224,7 @@ export default function CartPage() {
                             $1345.00
                         </p>
                     </div>
+                    <Button text="Checkout" onClick={()=> navigate('/checkout')} />
                 </div>
             </div>
             <div className="max-w-[424px]">

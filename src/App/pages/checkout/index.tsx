@@ -1,9 +1,11 @@
 import Button from "@/core/components/Button/Button";
 import Process from "@/core/components/Process";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CheckOutPage() {
     const [selectedOption, setSelectedOption] = useState('');
+    const navigate = useNavigate();
     return (
         <section className="px-8 lg:px-14 py-20">
             <div className="">
@@ -244,7 +246,7 @@ export default function CheckOutPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-14 mt-6">
                 <div className="md:col-span-2">
-                    <Button text="Place Order" type="submit" />
+                    <Button text="Place Order" type="submit" onClick={()=> navigate('/order')} />
                 </div>
             </div>
         </section>

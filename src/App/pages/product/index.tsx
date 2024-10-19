@@ -4,7 +4,7 @@ import ProductSlider from "@/core/components/ProductSlider/indext";
 
 export default function ProductPage() {
 
-    
+
 
   return (
       <section className="px-8 lg:px-14 border-t border-app-light-gray">
@@ -133,17 +133,17 @@ export default function ProductPage() {
               </div>
           </div>
           <div className="py-10 hidden md:block">
-              <div className="flex gap-20 border-b border-app-light-gray mb-12">
+              {/* <div className="flex gap-20 border-b border-app-light-gray mb-12">
                   <button className="text-app-gray font-inter text-lg/8 font-medium tracking-[-0.4px]">
                       Additional Info
                   </button>
                   <button className="text-app-gray font-inter text-lg/8 font-medium tracking-[-0.4px]">
                       Questions
                   </button>
-                  <button className="text-app-black border-b border-app-black font-inter text-lg/8 font-medium tracking-[-0.4px]">
+                  <button className="text-app-black font-inter text-lg/8 font-medium tracking-[-0.4px]">
                       Reviews
                   </button>
-              </div>
+              </div> */}
               <p className="text-app-black font-poppins text-[28px]/[34px] font-medium tracking-[-0.6px] mb-6">
                   Customer Reviews
               </p>
@@ -253,7 +253,7 @@ export default function ProductPage() {
               </div>
           </div>
           <div className="block md:hidden py-10">
-              <CustomAccordion
+              {/* <CustomAccordion
                   id="1"
                   title="Additional Info"
                   content={
@@ -482,7 +482,7 @@ export default function ProductPage() {
                           </div>
                       </>
                   }
-              />
+              /> */}
               <CustomAccordion
                   id="3"
                   title="Reviews"

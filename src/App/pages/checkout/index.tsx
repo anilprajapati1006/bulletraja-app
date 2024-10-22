@@ -81,7 +81,7 @@ export default function CheckOutPage() {
                             <input
                                 id="accept"
                                 type="checkbox"
-                                className="w-5 h-5 text-gray-500 border-2 rounded focus:ring-0 checked:bg-app-black checked:border-[#6C7275] cursor-pointer"
+                                className="w-5 h-5 text-gray-500 border-2 rounded focus:ring-0 checked:bg-app-orange checked:border-[#6C7275] cursor-pointer"
                             />
                             <label htmlFor="accept" className="flex text-xs md:text-base font-inter leading-[26px] text-app-gray">
                                 Use a different billing address (optional)
@@ -108,7 +108,7 @@ export default function CheckOutPage() {
                                     id="card"
                                     checked={selectedOption === 'card'}
 
-                                    className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-black checked:border-app-black text-app-black"
+                                    className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-orange checked:border-app-black text-app-black"
                                 />
                                 <p className="text-app-black font-inter text-base/[26px]">
                                     Pay by Card Credit
@@ -128,7 +128,7 @@ export default function CheckOutPage() {
                                     id="paypal"
                                     checked={selectedOption === 'paypal'}
 
-                                    className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-black checked:border-app-black text-app-black"
+                                    className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-orange checked:border-app-black text-app-black"
                                 />
                                 <p className="text-app-black font-inter text-base/[26px]">
                                     Pay Pal
@@ -137,7 +137,7 @@ export default function CheckOutPage() {
                             {/* <img src="/images/finance.svg" alt="finance" className="h-6 w-6 object-contain" /> */}
                         </div>
                         <div className="w-full pt-3">
-                            <div className="h-[1px] bg-app-black"></div>
+                            <div className="h-[1px] bg-app-orange"></div>
                         </div>
                         <div className="space-y-3 w-full">
                             <label htmlFor="cardnumber" className="text-app-gray font-inter text-sm/3 font-bold uppercase">Card Number</label>

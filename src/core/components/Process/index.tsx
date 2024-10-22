@@ -28,7 +28,7 @@ const Process: FC<ProcessProps> = ({ activeStep, completedStep }) => {
                     >
                         <p
                             className={`py-2 px-[17px] rounded-[40px] text-white text-center font-inter text-base/[26px] font-semibold 
-                            ${isActive ? 'bg-app-black' : isCompleted ? 'bg-app-green' : 'bg-muted-gray'}`}
+                            ${isActive ? 'bg-app-orange' : isCompleted ? 'bg-app-green' : 'bg-muted-gray'}`}
                         >
                             {step.id}
                         </p>

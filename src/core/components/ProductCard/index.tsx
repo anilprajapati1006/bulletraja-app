@@ -31,7 +31,7 @@ const ProductCard = ({ product }: {product: any}) => {
                 </div>
 
                 {/* Add to Cart Button */}
-                <button className='text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-black rounded-lg w-full px-10 py-[10px]'>
+                <button className='text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-orange rounded-lg w-full px-10 py-[10px]'>
                     Add to cart
                 </button>
             </div>

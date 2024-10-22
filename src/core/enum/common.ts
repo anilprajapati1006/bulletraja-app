@@ -14,3 +14,11 @@ export enum ROUTES {
   OTP_PAGE = '/otp',
   EORR_PAGE = '/error'
 }
+
+export enum HTTP_METHODS {
+  GET = "GET",
+  POST = "POST",
+  PUT = "PUT",
+  PATCH = "PATCH",
+  DELETE = "DELETE",
+}

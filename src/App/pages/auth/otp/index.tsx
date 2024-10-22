@@ -11,7 +11,7 @@ export default function OtpPage() {
   return (
       <div className='grid md:grid-cols-2 h-screen text-app-black'>
           <div className='login-background min-h-[437px]'>
-              <h1 className='text-center font-poppins font-medium text-2xl mt-8'>3legant.</h1>
+              <h1 className='text-center font-poppins font-medium text-2xl mt-8'>Bullet Raja.</h1>
           </div>
 
           <div className='flex items-center justify-center px-10'>
@@ -40,7 +40,7 @@ export default function OtpPage() {
                           <input type="number" name="fullname" id="fullname" className="border border-muted-gray outline-none ring-0 focus:ring-0 w-full rounded-md max-w-[60px] h-[60px] hide-spinner" />
                       </div>
                   </form>
-                  <button type="button" onClick={() => setModalOpen(true)} className='text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-black rounded-lg w-full px-10 py-[10px]'>
+                  <button type="button" onClick={() => setModalOpen(true)} className='text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-orange rounded-lg w-full px-10 py-[10px]'>
                       Send OTP
                   </button>
               </form>

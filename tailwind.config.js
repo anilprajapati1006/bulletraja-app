@@ -13,6 +13,8 @@ module.exports = {
       },
       colors: {
         'app-black': '#141718',
+        'app-orange': '#F6B71F',
+        'app-orange-dark': '#D88A13', 
         'app-gray': '#6C7275',
         'app-light-gray': '#E8ECEF',
         'app-slate-gray': '#343839',
@@ -21,6 +23,7 @@ module.exports = {
         'grayish-brown': '#605F5F',
         'taup-gray': '#807E7E',
         'muted-gray': '#B1B5C3',
+        'app-red': '#FF4D4F',
         primary: {
           DEFAULT: '#F3F5F7',
         }

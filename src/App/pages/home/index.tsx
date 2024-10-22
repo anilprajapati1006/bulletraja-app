@@ -174,7 +174,7 @@ const Home: FC = () => {
         </div>
         <div className='flex justify-center items-center'>
             <p className='text-app-gray font-inter text-sm/[22px] md:text-base/[26px] font-normal max-w-[424px]'>
-            <span className='text-app-slate-gray font-inter text-base/[26px] font-semibold'>3legant</span> is a gift & decorations store based in HCMC, Vietnam. Est since 2019.
+            <span className='text-app-slate-gray font-inter text-base/[26px] font-semibold'>Bullet Raja</span> is an accessories & riding gear store based in Ne. City Gold, Ashram Rd, Ahmedabad, Gujarat 380009. Established in 2019.
           </p>
         </div>
       </div>

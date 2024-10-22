@@ -18,9 +18,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <Fragment>
       {!isNoLayoutRoute && <Header />}
-      <main className='2xl:container mx-auto'>
+
+      <main className='2xl:container mx-auto animate__animated animate__fadeIn animate__delay-0.8s'>
         {children}
       </main>
+
       {!isNoLayoutRoute && <Footer />}
     </Fragment>
   );

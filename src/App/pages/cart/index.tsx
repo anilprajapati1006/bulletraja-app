@@ -152,7 +152,7 @@ export default function CartPage() {
                                 name="shipping"
                                 id="free-shipping"
                                 checked={selectedOption === 'free-shipping'}
-                                className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-black checked:border-app-black text-app-black"
+                                className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-orange checked:border-app-black text-app-black"
                             />
                             <p className="text-app-black font-inter text-base/[26px]">
                                 Free Shipping
@@ -175,7 +175,7 @@ export default function CartPage() {
                                 id="express-shipping"
                                 checked={selectedOption === 'express-shipping'}
 
-                                className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-black checked:border-app-black text-app-black"
+                                className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-orange checked:border-app-black text-app-black"
                             />
                             <p className="text-app-black font-inter text-base/[26px]">
                                 Express Shipping
@@ -198,7 +198,7 @@ export default function CartPage() {
                                 id="express-shipping"
                                 checked={selectedOption === 'express-shipping'}
 
-                                className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-black checked:border-app-black text-app-black"
+                                className="appearance-none w-5 h-5 border border-app-black rounded-full checked:bg-app-orange checked:border-app-black text-app-black"
                             />
                             <p className="text-app-black font-inter text-base/[26px]">
                                 Pick Up

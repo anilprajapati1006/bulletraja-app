@@ -9,7 +9,7 @@ export default function MobileMenu({ setOpen }: MobileMenuProps) {
         <div className='p-6 bg-white absolute top-0 left-0 z-50 w-full h-screen flex flex-col justify-between md:hidden'>
             <div>
                 <div className="flex justify-between items-center self-stretch">
-                    <img src="/images/logo.svg" alt="Logo" className='h-6 w-auto' />
+                    <img src="/logo.jpg" alt="Logo" className='h-6 w-auto' />
                     <button onClick={() => setOpen(false)}>
                         <img src="/images/close.svg" alt="Logo" className='h-6 w-auto' />
                     </button>
@@ -41,7 +41,7 @@ export default function MobileMenu({ setOpen }: MobileMenuProps) {
                     <a className="text-lg/[32px] font-inter font-medium tracking-[-0.4px] text-app-gray" href="#">Cart</a>
                     <div className='flex items-center gap-1.5'>
                         <img src="/images/shopping bag.svg" alt="Search Icon" className='h-6 w-6' />
-                        <div className='bg-app-black h-5 w-5 rounded-full flex justify-center items-center'>
+                        <div className='bg-app-orange h-5 w-5 rounded-full flex justify-center items-center'>
                             <p className='text-white text-center font-inter text-xs font-bold leading-[10px]'>
                                 2
                             </p>
@@ -52,7 +52,7 @@ export default function MobileMenu({ setOpen }: MobileMenuProps) {
                     <a className="text-lg/[32px] font-inter font-medium tracking-[-0.4px] text-app-gray" href="#">Wishlist</a>
                     <div className='flex items-center gap-1.5'>
                         <img src="/images/wishlist.svg" alt="Search Icon" className='h-6 w-6' />
-                        <div className='bg-app-black h-5 w-5 rounded-full flex justify-center items-center'>
+                        <div className='bg-app-orange h-5 w-5 rounded-full flex justify-center items-center'>
                             <p className='text-white text-center font-inter text-xs font-bold leading-[10px]'>
                                 2
                             </p>

@@ -4,10 +4,10 @@ export default function Footer() {
         <footer className='px-8 md:px-7 lg:px-14 py-12 md:pt-20 md:pb-8 bg-app-black'>
             <div className="flex flex-col md:flex-row justify-between items-center mb-[49px] 2xl:container mx-auto gap-10">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <h1 className='text-white text-center font-poppins font-medium text-2xl'>3legant.</h1>
+                    <h1 className='text-white text-center font-poppins font-medium text-2xl'>Bullet Raja.</h1>
                     <div className="h-[1px] w-6 md:min-h-6 md:w-[1px] bg-app-gray" />
                     <p className="max-w-[350px] flex-shrink-0 text-white font-inter text-sm/[22px]">
-                        Gift & Decoration Store
+                        Accessories & Riding Gear
                     </p>
                 </div>
                 <div>
@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="py-4 flex flex-col-reverse md:flex-row justify-between items-center 2xl:container mx-auto border-t-[0.5px] border-app-gray gap-8">
                 <div className="flex flex-col md:flex-row gap-7 items-center">
                     <p className="max-w-[350px] flex-shrink-0 text-app-light-gray font-poppins text-sm/[20px]">
-                        Copyright © 2023 3legant. All rights reserved
+                        Copyright © 2024. All rights reserved
                     </p>
                     <p className="max-w-[350px] flex-shrink-0 text-white font-poppins text-sm/[20px] font-semibold">
                         Privacy Policy

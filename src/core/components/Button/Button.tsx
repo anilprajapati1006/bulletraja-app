@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ text, onClick, type = 'button', classNa
         <button
             type={type}
             onClick={onClick}
-            className={`text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-black rounded-lg w-full px-10 py-[10px] ${className}`}
+            className={`text-white text-center font-inter text-base font-medium leading-[28px] tracking-[-0.4px] bg-app-orange rounded-lg w-full px-10 py-[10px] ${className}`}
             disabled={disabled}
         >
             {text}

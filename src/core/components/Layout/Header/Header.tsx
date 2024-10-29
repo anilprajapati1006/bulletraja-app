@@ -1,6 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import MobileMenu from './MobileMenu';
 import { Flayout } from '../../Cart/Flayout';
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -8,6 +9,8 @@ const Header: FC = () => {
     const [open, setOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
     const [hasAnimation, setHasAnimation] = useState(false);
+    const { pathname } = useLocation();
+    
 
     const navLinks = [
         { name: 'Home', url: '/' },
@@ -36,7 +39,7 @@ const Header: FC = () => {
 
     return (
         <header
-            className={`sticky top-0 z-50  ${hasAnimation ? 'bg-app-orange' : 'bg-[rgba(246,183,31,0.1)]'
+            className={`sticky top-0 z-50  ${!hasAnimation && pathname === '/' ? 'bg-[rgba(246,183,31,0.1)]' : 'bg-app-orange'
                 } transition-all duration-300 scroll-smooth w-full 2xl:container mx-auto`}
         >
             <div
@@ -122,7 +125,7 @@ const Header: FC = () => {
                         />
                         <div className='bg-white h-[22px] w-[22px] rounded-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 rotate-45' />
                     </div>
-                    <div className='text-2xl text-white font-semibold tracking-wide'>
+                    <div className={`text-2xl ${!hasAnimation && pathname === '/' ? 'text-white' : 'text-black'} font-semibold tracking-wide uppercase`}>
                         Bullet Raja
                     </div>
                 </a>
@@ -133,9 +136,9 @@ const Header: FC = () => {
                             <li key={index} className='flex items-center gap-x-2.5 group'>
                                 <a
                                     href={link.url}
-                                    className={`flex items gap-x-1.5 ${hasAnimation
-                                            ? 'text-black group-hover:text-white'
-                                            : 'group-hover:text-app-orange text-white'
+                                    className={`flex items gap-x-1.5 ${!hasAnimation && pathname === '/'
+                                        ? 'group-hover:text-app-orange text-white'
+                                        : 'text-black group-hover:text-white'
                                         } font-inter text-sm font-semibold transition-colors duration-300`}
                                 >
                                     {link.name}
@@ -152,9 +155,9 @@ const Header: FC = () => {
                                                 <path
                                                     id='Vector'
                                                     d='M5.22656 7.5L10.2266 12.5L15.2266 7.5'
-                                                    className={`${hasAnimation
-                                                            ? 'group-hover:stroke-white'
-                                                            : 'group-hover:stroke-app-orange stroke-white'
+                                                    className={`${!hasAnimation && pathname === '/'
+                                                        ? 'group-hover:stroke-app-orange stroke-white'
+                                                        : 'group-hover:stroke-white'
                                                         }`}
                                                     stroke='#121212'
                                                     stroke-width='1.5'
@@ -176,12 +179,12 @@ const Header: FC = () => {
                     >
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="icons/Heart/Line">
-                                <path id="Shape" fill-rule="evenodd" clip-rule="evenodd" d="M13.1924 6.91706C12.8055 7.28838 12.1945 7.28838 11.8076 6.91706L11.1152 6.2526C10.3048 5.47487 9.20994 5 8 5C5.51472 5 3.5 7.01472 3.5 9.5C3.5 11.8826 4.78979 13.8501 6.65176 15.4666C8.51532 17.0844 10.7434 18.1574 12.0746 18.7051C12.353 18.8196 12.647 18.8196 12.9254 18.7051C14.2566 18.1574 16.4847 17.0844 18.3482 15.4666C20.2102 13.85 21.5 11.8826 21.5 9.5C21.5 7.01472 19.4853 5 17 5C15.7901 5 14.6952 5.47487 13.8848 6.2526L13.1924 6.91706ZM12.5 4.80957C11.3321 3.6888 9.74649 3 8 3C4.41015 3 1.5 5.91015 1.5 9.5C1.5 15.8683 8.47034 19.385 11.3138 20.5547C12.0796 20.8697 12.9204 20.8697 13.6862 20.5547C16.5297 19.385 23.5 15.8682 23.5 9.5C23.5 5.91015 20.5899 3 17 3C15.2535 3 13.6679 3.6888 12.5 4.80957Z" className={`${hasAnimation ? 'fill-black': 'fill-white'}`} />
+                                <path id="Shape" fill-rule="evenodd" clip-rule="evenodd" d="M13.1924 6.91706C12.8055 7.28838 12.1945 7.28838 11.8076 6.91706L11.1152 6.2526C10.3048 5.47487 9.20994 5 8 5C5.51472 5 3.5 7.01472 3.5 9.5C3.5 11.8826 4.78979 13.8501 6.65176 15.4666C8.51532 17.0844 10.7434 18.1574 12.0746 18.7051C12.353 18.8196 12.647 18.8196 12.9254 18.7051C14.2566 18.1574 16.4847 17.0844 18.3482 15.4666C20.2102 13.85 21.5 11.8826 21.5 9.5C21.5 7.01472 19.4853 5 17 5C15.7901 5 14.6952 5.47487 13.8848 6.2526L13.1924 6.91706ZM12.5 4.80957C11.3321 3.6888 9.74649 3 8 3C4.41015 3 1.5 5.91015 1.5 9.5C1.5 15.8683 8.47034 19.385 11.3138 20.5547C12.0796 20.8697 12.9204 20.8697 13.6862 20.5547C16.5297 19.385 23.5 15.8682 23.5 9.5C23.5 5.91015 20.5899 3 17 3C15.2535 3 13.6679 3.6888 12.5 4.80957Z" className={`${!hasAnimation && pathname === '/' ? 'fill-white' : 'fill-black'}`} />
                             </g>
                         </svg>
 
                         <div
-                            className={`${hasAnimation ? 'bg-app-black' : 'bg-app-orange'
+                            className={`${!hasAnimation && pathname === '/' ? 'bg-app-orange' : 'bg-app-black'
                                 } absolute -top-3 -right-3 h-5 w-5 rounded-full flex justify-center items-center transition-all duration-300`}
                         >
                             <p className='text-white text-center font-inter text-xs font-bold leading-[10px]'>
@@ -192,7 +195,7 @@ const Header: FC = () => {
 
                     <a href='/profile'>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.5588 19.5488C17.5654 16.8918 15.0036 15 12 15C8.99638 15 6.4346 16.8918 5.44117 19.5488M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33285 17.7154 5.44117 19.5488M18.5588 19.5488C16.8031 21.0756 14.5095 22 12 22C9.49052 22 7.19694 21.0756 5.44117 19.5488M15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9Z" className={`${hasAnimation ? 'stroke-black' : 'stroke-white'}`} stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M18.5588 19.5488C17.5654 16.8918 15.0036 15 12 15C8.99638 15 6.4346 16.8918 5.44117 19.5488M18.5588 19.5488C20.6672 17.7154 22 15.0134 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 15.0134 3.33285 17.7154 5.44117 19.5488M18.5588 19.5488C16.8031 21.0756 14.5095 22 12 22C9.49052 22 7.19694 21.0756 5.44117 19.5488M15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9Z" className={`${!hasAnimation && pathname === '/' ? 'stroke-white' : 'stroke-black'}`} stroke-width="1.5" stroke-linejoin="round" />
                         </svg>
                     </a>
                     <button
@@ -200,11 +203,11 @@ const Header: FC = () => {
                         className='relative flex items-center gap-1.5'
                     >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 6L9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7V6" className={`${hasAnimation ? 'stroke-black' : 'stroke-white'}`} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.6113 3H8.38836C6.433 3 4.76424 4.41365 4.44278 6.3424L2.77612 16.3424C2.36976 18.7805 4.24994 21 6.72169 21H17.278C19.7498 21 21.6299 18.7805 21.2236 16.3424L19.5569 6.3424C19.2355 4.41365 17.5667 3 15.6113 3Z" className={`${hasAnimation ? 'stroke-black' : 'stroke-white'}`} stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M9 6L9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7V6" className={`${!hasAnimation && pathname === '/' ? 'stroke-white' : 'stroke-black'}`} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.6113 3H8.38836C6.433 3 4.76424 4.41365 4.44278 6.3424L2.77612 16.3424C2.36976 18.7805 4.24994 21 6.72169 21H17.278C19.7498 21 21.6299 18.7805 21.2236 16.3424L19.5569 6.3424C19.2355 4.41365 17.5667 3 15.6113 3Z" className={`${!hasAnimation && pathname === '/' ? 'stroke-white' : 'stroke-black'}`} stroke-width="1.5" stroke-linejoin="round" />
                         </svg>
                         <div
-                            className={`${hasAnimation ? 'bg-app-black' : 'bg-app-orange'
+                            className={`${!hasAnimation && pathname === '/' ? 'bg-app-orange' : 'bg-app-black'
                                 } absolute -top-3 -right-3 h-5 w-5 rounded-full flex justify-center items-center transition-all duration-300`}
                         >
                             <p className='text-white text-center font-inter text-xs font-bold leading-[10px]'>

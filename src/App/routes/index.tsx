@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { IRoute } from '@/core/interface/common';
 import { ROUTES } from '@/core/enum/common';
 
-import { AboutPage, CartPage, CheckOutPage, ContactPage, ErrorPage, ForgotPassword, HomePage, LoginPage, OtpPage, ProductPage, RegisterPage, ShopPage } from '@/app/pages';
+import { AboutPage, CartPage, CheckOutPage, ContactPage, ErrorPage, ForgotPassword, HomePage, LoginPage, OtpPage, ProductPage, RegisterPage, ShopeByCategory, ShopPage } from '@/app/pages';
 import OrderComplete from '../pages/order';
 import ProfilePage from '../pages/profile';
 
@@ -74,6 +74,11 @@ const AppRoutes: FC = () => {
       name: 'Error',
       path: ROUTES.EORR_PAGE,
       component: ErrorPage,
+    },
+    {
+      name: 'Shop By Category',
+      path: ROUTES.SHOP_BY_CATEGORY,
+      component: ShopeByCategory
     }
   ];
 

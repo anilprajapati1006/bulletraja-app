@@ -113,6 +113,15 @@
   background-position: center center;
 }
 
+.shop-by-category-page-banner-bg {
+  background:
+    /* linear-gradient(180deg, rgba(243, 245, 247, 0.00) 27.68%, rgba(243, 245, 247, 0.60) 66.63%, rgba(243, 245, 247, 0.20) 100%), */
+    url('/images/shop-category.png') lightgray 50% / cover no-repeat;
+  background-color: #F3F5F7;
+  background-blend-mode: normal, multiply;
+  background-position: center center;
+}
+
 .custom-categroy-scrollbar::-webkit-scrollbar {
   width: 8px;
 }

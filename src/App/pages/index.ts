@@ -12,3 +12,4 @@ export { default as AboutPage } from './about';
 export { default as ForgotPassword } from './auth/password';
 export { default as OtpPage } from './auth/otp';
 export { default as ErrorPage } from './error';
+export { default as ShopeByCategory } from './shopByCategory';

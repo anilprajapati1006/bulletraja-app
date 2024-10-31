@@ -12,7 +12,8 @@ export enum ROUTES {
   ABOUT = '/about',
   FORGOT_PASSWORD = '/forgot-password',
   OTP_PAGE = '/otp',
-  EORR_PAGE = '/error'
+  EORR_PAGE = '/error',
+  SHOP_BY_CATEGORY = '/shop-by-category'
 }
 
 export enum HTTP_METHODS {
